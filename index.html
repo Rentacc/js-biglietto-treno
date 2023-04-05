@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trenijava</title>
+    
+</head>
+<body style="background-repeat: no-repeat;" background="JanuaryTitle.png">
+    
+
+    <script>
+        // Chiedi all'utente il numero di chilometri da percorrere
+var km = parseInt(prompt("Quanti chilometri devi percorrere?"));
+
+// Chiedi all'utente l'età del passeggero
+var eta = parseInt(prompt("Quanti anni hai?"));
+
+// Calcola il prezzo del biglietto in base ai km
+var prezzo = km * 0.21;
+
+// Applica lo sconto del 20% per i minorenni
+if (eta < 18) {
+  prezzo = prezzo * 0.8;
+}
+
+// Applica lo sconto del 40% per gli over 65
+if (eta >= 65) {
+  prezzo = prezzo * 0.6;
+}
+
+// Visualizza il prezzo finale
+alert("Il prezzo del tuo biglietto è di " + prezzo.toFixed(2) + " euro.");
+    </script>
+    
+</body>
+</html>
